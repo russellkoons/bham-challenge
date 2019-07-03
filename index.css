@@ -15,6 +15,10 @@ h1, h2 {
   width: 15%;
 }
 
+#search {
+  text-align: center;
+}
+
 .flex-grid {
   display: flex;
   margin-left: auto;
