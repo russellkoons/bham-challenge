@@ -15,19 +15,27 @@
   </header>
   <main>
     <section id="search">
-      <div id="zip">
+      <div>
         <p>Enter your zip code to locate<br>your closest participating Cadillac Dealer:</p>
-        <form>
-          <input type="number" placeholder="Zip Code"><br>
+        <form onsubmit="search(event)">
+          <input id="zip" type="number" placeholder="Zip Code"><br>
           <input type="submit" value="Search By Zip">
           <input type="submit" value="Find Near Me">
         </form>
       </div>
-      <div id="result">
+      <div id="error">
 
       </div>
+      <div id="result">
+        <div id="info">
+
+        </div>
+        <div id="map">
+          
+        </div>
+      </div>
     </section>
-    <section class="flex-grid">
+    <section id="content" class="flex-grid">
       <div class="col">
         <img src="assets/xt4.jpg" alt="The First Ever Cadillac XT4 crossover" class="car-pic">
         <h2>The First Ever Cadillac XT4 crossover</h2>
@@ -55,5 +63,7 @@
   <footer>
     Copyright &copy; 2019
   </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>

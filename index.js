@@ -1,5 +1,29 @@
 'use strict';
 
+function search(e) {
+  e.preventDefault();
+  const z = document.getElementById('zip').value;
+
+  if (z.length < 5) {
+    $('#error').empty().append('<p class="err">Please enter a valid Zip Code</p>');
+  }
+
+  const res = dealers.find(o => o.zip === z);
+  
+  if (res === undefined) {
+    $('#error').empty().append(`<p class="err">Could not find a dealer for ${z}</p>`);
+  } else {
+    $('#error').empty();
+    $('#info').empty().append(
+      `<p>Your local Cadillac dealer is:</p>
+      <h2>${res.name}</h2>
+      <p>${res.address}</p>
+      <p>${res.city}, ${res.state} ${res.zip}</p>
+      <a href="${res.url}">Visit their website!</a>`
+    );
+  }
+}
+
 const dealers = [
   {
     name: 'Armen Cadillac',

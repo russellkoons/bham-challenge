@@ -63,9 +63,17 @@ footer {
   text-align: center;
 }
 
+#info {
+  text-align: left;
+}
+
 #title {
   margin-top: 50px;
   margin-left: 10px;
+}
+
+.err {
+  color: red;
 }
 
 .flex-grid {
