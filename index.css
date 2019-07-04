@@ -14,9 +14,35 @@ h1, h2 {
   font-weight: lighter;
 }
 
+form {
+  margin-bottom: 15px;
+}
+
+input[type=number] {
+  width: 220px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid darkgrey;
+  border-radius: 3px;
+}
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
    opacity: 1;
+}
+
+input[type=submit] {
+  padding: 10px;
+  font-size: 16px;
+  border: 0px;
+  border-radius: 5%;
+  background: #f1f0f2;
+}
+
+input[type=submit]:hover {
+  background: #d7d7d9;
+  transition: 0.4s;
 }
 
 footer {
