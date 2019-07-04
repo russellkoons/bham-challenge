@@ -1,6 +1,11 @@
+html {
+  line-height: 26px;
+  color: #404040;
+}
+
 header {
-  display: flex;
-  margin: auto;
+  position: relative;
+  margin: auto auto 150px auto;
 }
 
 h1, h2 {
@@ -9,14 +14,32 @@ h1, h2 {
   font-weight: lighter;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+   opacity: 1;
+}
+
+footer {
+  float: right;
+  margin: 50px auto;
+  font-size: 15px;
+}
+
 #logo {
-  position: relative;
+  position: absolute;
   right: 0;
-  width: 15%;
+  top: -50px;
+  max-width: 182px;
+  max-height: 148px;
 }
 
 #search {
   text-align: center;
+}
+
+#title {
+  margin-top: 50px;
+  margin-left: 10px;
 }
 
 .flex-grid {
@@ -24,13 +47,42 @@ h1, h2 {
   margin-left: auto;
   margin-right: auto;
   justify-content: space-between;
-  width: 100vw;
+  width: 100%;
 }
 
 .col {
   flex: 1;
+  float: right;
+  margin: 10px;
 }
 
 .car-pic {
-  max-width: 45vw;
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 840px) {
+  header {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+  }
+
+  #logo {
+    position: relative;
+    left: calc(100% - 182px);
+    top: 0;
+  }
+
+  #title {
+    position: relative;
+    margin-top: 0px;
+  }
+  
+  .flex-grid {
+    display: block;
+  }
+
+  .col {
+    margin: 5px;
+  }
 }
