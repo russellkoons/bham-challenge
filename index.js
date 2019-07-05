@@ -4,6 +4,7 @@ function search(e) {
   e.preventDefault();
   const z = document.getElementById('zip').value;
 
+  // Zip code error
   if (z.length < 5 || z.length > 5) {
     $('#error').empty().append('<p class="err">Please enter a valid Zip Code</p>');
   }
@@ -11,6 +12,7 @@ function search(e) {
   const res = dealers.find(o => o.zip === z);
   
   if (res === undefined) {
+    // No dealer found error
     $('#error').empty().append(`<p class="err">Could not find a dealer for ${z}</p>`);
   } else {
     const addy = `${res.address}, ${res.city}, ${res.state}`;
