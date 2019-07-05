@@ -22,7 +22,7 @@ function search(e) {
       <h2>${res.name}</h2>
       <p>${res.address}</p>
       <p>${res.city}, ${res.state} ${res.zip}</p>
-      <a href="${res.url}">Visit their website!</a>`
+      <a href="http://${res.url}" target="_blank">Visit their website!</a>`
     );
     $('#map').empty().append(
       `<a href="https://www.google.com/maps/search/?api=1&query=${linkAddy}">
