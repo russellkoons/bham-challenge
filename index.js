@@ -4,7 +4,7 @@ function search(e) {
   e.preventDefault();
   const z = document.getElementById('zip').value;
 
-  if (z.length < 5) {
+  if (z.length < 5 || z.length > 5) {
     $('#error').empty().append('<p class="err">Please enter a valid Zip Code</p>');
   }
 
