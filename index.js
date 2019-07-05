@@ -13,6 +13,9 @@ function search(e) {
   if (res === undefined) {
     $('#error').empty().append(`<p class="err">Could not find a dealer for ${z}</p>`);
   } else {
+    const addy = `${res.address}, ${res.city}, ${res.state}`;
+    const linkAddy = addy.replace(/ /g, '+');
+
     $('#error').empty();
     $('#info').empty().append(
       `<p>Your local Cadillac dealer is:</p>
@@ -21,6 +24,11 @@ function search(e) {
       <p>${res.city}, ${res.state} ${res.zip}</p>
       <a href="${res.url}">Visit their website!</a>`
     );
+    $('#map').empty().append(
+      `<a href="https://www.google.com/maps/search/?api=1&query=${linkAddy}">
+      <img src="https://maps.googleapis.com/maps/api/staticmap?center=${linkAddy}&zoom=13&size=300x300&maptype=roadmap&markers=${linkAddy}&key=AIzaSyCvH1drFfqflI4Sy10IeEmQnKe3yKQy5-o" alt="${res.name}">
+      </a>`
+    )
   }
 }
 

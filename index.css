@@ -63,8 +63,10 @@ footer {
   text-align: center;
 }
 
-#info {
-  text-align: left;
+#result {
+  display: flex;
+  width: 50%;
+  margin: auto;
 }
 
 #title {
@@ -86,7 +88,6 @@ footer {
 
 .col {
   flex: 1;
-  float: right;
   margin: 10px;
 }
 
@@ -105,6 +106,15 @@ footer {
     position: relative;
     left: calc(100% - 182px);
     top: 0;
+  }
+
+  #result {
+    display: block;
+    width: 100%;
+  }
+
+  #map {
+    margin: auto;
   }
 
   #title {
