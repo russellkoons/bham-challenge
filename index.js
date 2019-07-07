@@ -1,5 +1,9 @@
 'use strict';
 
+// Since there were no instructions, I was unsure how much you wanted me to do for the project. I've made a simple store locator
+// that can find dealers based on the exact zip code. If you want me to go deeper and make it so it can search for the nearest
+// dealer to ANY zip code let me know and I'll be happy to do it.
+
 function search(e) {
   e.preventDefault();
   const z = document.getElementById('zip').value;
